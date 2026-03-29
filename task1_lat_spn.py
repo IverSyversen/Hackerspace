@@ -1,6 +1,4 @@
-"""
-Task 1 – Linear Approximation Table (LAT) for the SPN 4-bit S-box
-"""
+
 
 # S-box: S = [E, 4, D, 1, 2, F, B, 8, 3, A, 6, C, 5, 9, 0, 7]
 SPN_SBOX = [0xE, 0x4, 0xD, 0x1, 0x2, 0xF, 0xB, 0x8,
