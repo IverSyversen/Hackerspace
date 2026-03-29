@@ -1,6 +1,4 @@
-"""
-Task 2 – Key Recovery Experiment for y = S(x XOR k)
-"""
+
 
 import random
 from task1_lat_spn import SPN_SBOX, build_lat, dot
