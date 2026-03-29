@@ -1,6 +1,4 @@
-"""
-Task 3 – DES and AES S-box LAT Analysis and Comparison
-"""
+
 
 from task1_lat_spn import SPN_SBOX, build_lat
 
@@ -134,20 +132,4 @@ if __name__ == "__main__":
     print(f"  {'AES':>8}  {8:>6}  {8:>6}  {aes_max:>10}  "
           f"{aes_max/128.0:>12.4f}  {aes_prob:>16.4f}")
 
-    print(f"""
---- Conclusions ---
-  1. Smaller maximum bias => higher resistance to linear cryptanalysis.
 
-  2. The AES S-box achieves the smallest normalised bias ({aes_max/128.0:.4f})
-     and best linear probability of just {aes_prob:.4f}.
-
-  3. DES S-boxes have a moderate normalised bias. They were designed before
-     linear cryptanalysis was publicly known, yet the 16-round structure makes
-     practical attacks difficult (Matsui's attack requires ~2^43 known plaintexts).
-
-  4. The SPN S-box has the largest normalised bias ({spn_max/8.0:.4f}), making it
-     the most vulnerable. Full key recovery was possible with as few as 50 pairs.
-
-  5. S-box design is critical: the maximum bias is a lower bound on how
-     susceptible a cipher is to linear cryptanalysis, regardless of round count.
-""")
